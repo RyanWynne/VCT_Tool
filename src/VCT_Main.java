@@ -402,7 +402,7 @@
      }
      
      public static void championsAgg(ArrayList<Team> teams) {
-         for(int i = 0; i<1000; i++) {
+         for(int i = 0; i<100000; i++) {
              ArrayList<Team>[] seededGroups = seedingSilent(teams);
              ArrayList<Team> knockoutTeams = groupStageSilent(seededGroups);
              Team champion = knockoutStageSilent(knockoutTeams);
@@ -441,7 +441,7 @@
          }
          Collections.sort(teams, Team.champsOrder);
          for(Team t:teams) {
-             System.out.println(t.getName() + " won " + ((float)t.champsWon*100/1000) + "% of the time.");
+             System.out.println(t.getName() + " won " + (double) Math.round(((float)t.champsWon*100/100000) * 100) / 100  + "% of the time.");
          }
      }
      
@@ -2591,7 +2591,7 @@
      public static ArrayList<Team> parse() {
          ArrayList<Team> teams = new ArrayList<Team>();
          try {
-             File inputFile = new File("C:\\Users\\Ryan Wynne\\OneDrive\\Documents\\MyVSCode\\VCT24_Tool\\src\\Setup.txt");
+             File inputFile = new File("C:\\Users\\Ryan Wynne\\OneDrive\\Documents\\MyVSCode\\VCT_Tool\\src\\Setup.txt");
              Scanner scanner = new Scanner(inputFile);
              while(scanner.hasNextLine()) {
                  String currentLine = scanner.nextLine();
