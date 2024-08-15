@@ -13,7 +13,7 @@ public class Team {
 			+ascentAttSel+ascentDefSel+bindAttSel+bindDefSel
 			+havenAttSel+havenDefSel+iceboxAttSel+iceboxDefSel
 			+lotusAttSel+lotusDefSel);
-	int rating, intlRating, score, mapsWon, champsWon;
+	int rating, intlRating, score, mapsWon, champsWon, seed;
 
 	public Team() {
 		
@@ -815,6 +815,14 @@ public class Team {
 		this.name = newName;
 	}
 	
+    public int getSeed(){
+        return seed;
+    }
+
+    public void setSeed(int seed){
+        this.seed = seed;
+    }
+
 	public int getChampsWins() {
 		return champsWon;
 	}
