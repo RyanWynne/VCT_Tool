@@ -8,7 +8,7 @@
 		- Look for opportunities to reduce redundancies with functions
 		- Error handling
 
-        - I think there's flaws in the playMap function. Potentially teamA is always on attack???
+        - I think there's flaws in the playMap function. Potentially teamA is always on attack????
  */
 
 import java.io.File;
@@ -2544,10 +2544,10 @@ public class VCT_Main {
         return null;
     }
 
-    public static ArrayList<Team> parse() {
+    public static ArrayList<Team> parse() { 
         ArrayList<Team> teams = new ArrayList<Team>();
         try {
-            File inputFile = new File("C:\\Users\\Ryan Wynne\\OneDrive\\Documents\\MyVSCode\\VCT_Tool\\src\\Setup.txt");
+            File inputFile = new File("C:\\Users\\rw029\\OneDrive\\Documents\\MyVSCode\\VCT_Tool\\src\\Setup.txt");
             Scanner scanner = new Scanner(inputFile);
             while (scanner.hasNextLine()) {
                 String currentLine = scanner.nextLine();
@@ -2989,26 +2989,6 @@ public class VCT_Main {
                     System.out.print("Invalid input. Please enter input as instructed.\n");
             }
         }
-
-        /*
-         * ArrayList<Team> qualifiedTeams = new ArrayList<Team>();
-         * Team qualified = new Team();
-         * for (int i = 0; i < 16; i++) {
-         * String tricode = input.next();
-         * for (Team t : teams) {
-         * if (t.name.equalsIgnoreCase(tricode)) {
-         * qualified = t;
-         * qualified.setSeed((i % 4) + 1);
-         * break;
-         * }
-         * }
-         * qualifiedTeams.add(qualified);
-         * }
-         * ArrayList<Team> finalOrder = randomGrouping(qualifiedTeams);
-         * for (Team t : finalOrder) {
-         * System.out.println(t.name);
-         * }
-         */
         input.close();
     }
 
